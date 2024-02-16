@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node101-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node101
+  template:
+    metadata:
+      labels:
+        app: node101
+    spec:
+      containers:
+        - name: node101
+          image: traipatk/nodehello:1.0.0-6 
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 3000
