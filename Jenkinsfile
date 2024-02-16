@@ -2,7 +2,7 @@ pipeline {
 	agent { label "Jenkins-Agent" }
     environment {
               APP_NAME = "nodehello"
-			  IMAGE_TAG = "1.0.0-6"
+			  /*IMAGE_TAG = "1.0.0-6"*/
     }
 
     stages {
