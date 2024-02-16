@@ -12,13 +12,13 @@ pipeline {
             }
         }
         
-		/*
+		
         stage("Checkout from SCM") {
                steps {
                    git branch: 'main', credentialsId: 'traipat9kt', url: 'https://github.com/traipat9k/gitops-node101'
                }
         }
-        */
+     
 		
         stage("Update the Deployment Tags") {
             steps {
